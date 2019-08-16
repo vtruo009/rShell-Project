@@ -1,0 +1,20 @@
+echo hello && (pwd; date)
+
+(pwd && ls) && (hello || ls)
+
+(echo "hello goodbye" || hello && (pwd && computer)) || ls
+
+(echo "hello"; hello || (date; ls) || echo look && (pwd && git status))
+
+ls -a; (ls || date && (echo B || echo C)) || git branch
+
+date && randomword || (echo bye && pwd); ls)
+
+(ls)
+
+(ls -a && checking || echo C) && hi
+
+(echo "hello" && (echo "bye"; pwd && (ls || bye)); whoami)
+
+mami && (echo "beee" && pwd && (echo A; echo B) && (ls || whoami); date)
+exit

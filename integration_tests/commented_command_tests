@@ -1,0 +1,9 @@
+hello || ls #echo hello
+
+#hello world goodbye
+
+ls && pwd #date
+
+ls #-a bye
+
+exit

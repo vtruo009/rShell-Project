@@ -1,0 +1,10 @@
+[ -e src/main.cpp ] 
+[ -f src/main.cpp ] 
+[ -d src/main.cpp ] 
+[ src/main.cpp ]
+[ -e integration_test/hello] || echo "path doesn't exist"
+[ -f CMakeLists.txt ] && echo path exists
+[ -d prototype ]; echo path exists
+[ -d images/] && echo path exists; faili#nghard
+[ -d src/Shell.h ] || echo path exists but not directory
+exit

@@ -1,0 +1,8 @@
+cat < input_redirection_tests
+cat < output_redirection_tests
+cat < README.md
+wc < README.md
+
+cat < hellobye
+
+exit

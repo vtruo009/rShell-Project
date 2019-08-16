@@ -1,0 +1,15 @@
+pwd | cat
+
+echo hello > existingInputFile
+cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2
+cat < existingInputFile | tee newOutputFile2
+
+echo this will work > test
+(cat < test | tr A-Z a-z | wc < test2) &&  echo yay it works
+
+echo this is the best >> test | echo no no > test2 | echo yes
+hello || echo hello && (cat < test | tee test2 | tr a-z A-Z > newOutputFile2)
+
+rm existingInputFile newOutputFile1 newOutputFile2 test test2
+
+exit

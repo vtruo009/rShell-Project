@@ -1,0 +1,5 @@
+ls -a || yes
+echo hello world; bye
+history && data
+git status && echo "hello"; ls
+exit

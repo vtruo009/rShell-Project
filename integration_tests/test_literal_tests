@@ -1,0 +1,12 @@
+test -e src/main.cpp && echo path exists
+test -f images && echo path doesn't exist
+test -f src/Shell.h; echo path exists
+test -f integration_test/hello || echo path doesn't exist
+test -d prototype/ && echo "path exists"
+test -d src/text.txt && 
+test src/Shell.h
+test -e src/nameless.h 
+test -d images/
+test -e src/goodbye.h || echo path exists && ls
+test src/main.cpp
+exit

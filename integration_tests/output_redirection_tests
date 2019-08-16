@@ -1,0 +1,13 @@
+ls > test.txt
+echo hello world > test.txt
+cat < tests.txt > test1
+echo hello bye > test1 | wc < test.txt
+(ls > testing.txt | wc <  testing.txt) && echo works
+
+echo hello goodbye >> testing.txt 
+echo hello goodbye >> newfile
+rm test.txt
+rm test1
+rm testing.txt
+rm newfile
+exit

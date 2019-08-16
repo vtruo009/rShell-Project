@@ -1,0 +1,38 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+ADD_SUBDIRECTORY(googletest)
+
+SET(CMAKE_CXX_STANDARD 11)
+SET(PROJECT_SOURCE_DIR "${PROJECT_SOURCE_DIR}/unit_tests")
+SET(PROJECT_BINARY_DIR "${PROJECT_BINARY_DIR}/src")
+
+ADD_EXECUTABLE(test
+	${PROJECT_SOURCE_DIR}/test.cpp
+	${PROJECT_BINARY_DIR}/MultiCommand.cpp
+	${PROJECT_BINARY_DIR}/Anding.cpp
+	${PROJECT_BINARY_DIR}/Oring.cpp
+	${PROJECT_BINARY_DIR}/Semicolon.cpp
+	${PROJECT_BINARY_DIR}/Connectors.cpp
+	${PROJECT_BINARY_DIR}/Exit.cpp
+	${PROJECT_BINARY_DIR}/TestCommand.cpp
+	${PROJECT_BINARY_DIR}/Greater.cpp
+        ${PROJECT_BINARY_DIR}/Less.cpp
+	${PROJECT_BINARY_DIR}/GG.cpp
+)
+
+ADD_EXECUTABLE(rshell
+	${PROJECT_BINARY_DIR}/main.cpp
+	${PROJECT_BINARY_DIR}/MultiCommand.cpp
+        ${PROJECT_BINARY_DIR}/Anding.cpp
+        ${PROJECT_BINARY_DIR}/Oring.cpp
+        ${PROJECT_BINARY_DIR}/Semicolon.cpp
+        ${PROJECT_BINARY_DIR}/Connectors.cpp
+        ${PROJECT_BINARY_DIR}/Exit.cpp
+	${PROJECT_BINARY_DIR}/TestCommand.cpp
+	${PROJECT_BINARY_DIR}/Greater.cpp
+	${PROJECT_BINARY_DIR}/Less.cpp
+	${PROJECT_BINARY_DIR}/GG.cpp
+)
+
+TARGET_LINK_LIBRARIES(test gtest)
+TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
